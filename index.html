@@ -3,105 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavEase: Keyword-based URL Redirection</title>
+    <title>NavEase - User Guide</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #f4f4f4;
         }
         header {
+            background-color: #3498db;
+            color: #fff;
             text-align: center;
-            margin-bottom: 40px;
+            padding: 1rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        h1 {
-            color: #007bff;
+        header img {
+            width: 50px;
+            margin-right: 15px;
         }
-        .logo {
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-            display: block;
+        h1, h2, h3 {
+            color: #2c3e50;
         }
-        section {
-            margin-bottom: 40px;
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
-        h2 {
-            color: #0056b3;
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 30px;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 20px;
         }
-        ul {
-            padding-left: 20px;
-        }
-        .cta {
-            text-align: center;
-            margin-top: 40px;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
         .button {
             display: inline-block;
-            background-color: #007bff;
-            color: white;
+            background-color: #3498db;
+            color: #fff;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            font-weight: bold;
+            transition: background-color 0.3s;
         }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #2980b9;
+        }
+        .screenshot {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: 10px 0;
+        }
+        .step {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="NavEase Logo" class="logo">
-        <h1>NavEase: Keyword-based URL Redirection</h1>
-        <p>Transform Your Browsing Experience with NavEase</p>
+        <img src="images/logo.png" alt="NavEase Logo">
+        <h1>NavEase - User Guide</h1>
     </header>
+    
+    <div class="container">
+        <h2>Welcome to NavEase</h2>
+        <p>NavEase is a powerful keyword-based URL redirection tool. This guide will help you navigate through the features and functionalities of our application.</p>
+        
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/z_k4ilvMVB8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
 
-    <section>
-        <h2>About NavEase</h2>
-        <p>NavEase is a powerful browser extension that simplifies your web navigation by allowing you to use custom keywords to quickly access your favorite websites.</p>
-    </section>
+        <h2>Getting Started</h2>
+        
+        <div class="step">
+            <h3>1. Login</h3>
+            <p>To begin using NavEase, you'll need to log in to your account.</p>
+            <ol>
+                <li>Navigate to the login page</li>
+                <li>Enter your username and password</li>
+                <li>Click the "Login" button</li>
+            </ol>
+            <img class="screenshot" src="path_to_login_screenshot.png" alt="Login Screenshot">
+        </div>
 
-    <section>
-        <h2>Key Features</h2>
-        <ul>
-            <li>Custom keyword shortcuts for your favorite URLs</li>
-            <li>Quick access through the browser's address bar</li>
-            <li>Secure login to your personal NavEase configuration</li>
-            <li>Easy-to-use settings panel</li>
-            <li>Works seamlessly across different devices</li>
-        </ul>
-    </section>
+        <div class="step">
+            <h3>2. Dashboard Overview</h3>
+            <p>Once logged in, you'll be directed to your dashboard. Here's what you'll see:</p>
+            <ul>
+                <li>Organization Level URLs</li>
+                <li>Team Level URLs</li>
+                <li>Personal Level URLs</li>
+            </ul>
+            <img class="screenshot" src="path_to_dashboard_screenshot.png" alt="Dashboard Screenshot">
+        </div>
 
-    <section>
-        <h2>How to Use</h2>
-        <ol>
-            <li>Install the NavEase extension for your browser</li>
-            <li>Click on the NavEase icon and enter your configuration URL</li>
-            <li>Log in with your credentials</li>
-            <li>Start using keywords in your address bar by typing "nav" followed by a space and your keyword</li>
-        </ol>
-    </section>
+        <div class="step">
+            <h3>3. Adding a New URL</h3>
+            <p>To add a new URL redirection:</p>
+            <ol>
+                <li>Click the "+" button in the bottom right corner</li>
+                <li>Enter the key (keyword) and the URL</li>
+                <li>Select the level (Personal, Team, or Organization)</li>
+                <li>If Team or Organization, select the appropriate options</li>
+                <li>Click "Add Key-Value" to save</li>
+            </ol>
+            <img class="screenshot" src="path_to_add_url_screenshot.png" alt="Add URL Screenshot">
+        </div>
 
-    <section>
-        <h2>Benefits</h2>
-        <ul>
-            <li>Save time by quickly accessing frequently visited websites</li>
-            <li>Improve productivity with custom shortcuts</li>
-            <li>Enjoy a clutter-free bookmarks bar</li>
-            <li>Access your personalized navigation from any device</li>
-        </ul>
-    </section>
+        <div class="step">
+            <h3>4. Managing URLs</h3>
+            <p>You can easily manage your URLs:</p>
+            <ul>
+                <li>Update: Click the "Update" button next to a URL to modify it</li>
+                <li>Delete: Click the "Delete" button to remove a URL</li>
+            </ul>
+            <img class="screenshot" src="path_to_manage_urls_screenshot.png" alt="Manage URLs Screenshot">
+        </div>
 
-    <div class="cta">
-        <a href="#" class="button">Download NavEase</a>
+        <div class="step">
+            <h3>5. User Profile</h3>
+            <p>To view or edit your profile:</p>
+            <ol>
+                <li>Click on your profile icon in the sidebar</li>
+                <li>View your information, including assigned organization and teams</li>
+                <li>Update your profile information or change your password</li>
+            </ol>
+            <img class="screenshot" src="path_to_profile_screenshot.png" alt="Profile Screenshot">
+        </div>
+
+        <h2>Admin Features</h2>
+        <p>If you have admin privileges, you'll have access to additional settings:</p>
+
+        <div class="step">
+            <h3>6. Manage Users</h3>
+            <p>Add, update, or remove users from the system.</p>
+            <img class="screenshot" src="path_to_manage_users_screenshot.png" alt="Manage Users Screenshot">
+        </div>
+
+        <div class="step">
+            <h3>7. Manage Organizations</h3>
+            <p>Create and manage organizations within NavEase.</p>
+            <img class="screenshot" src="path_to_manage_orgs_screenshot.png" alt="Manage Organizations Screenshot">
+        </div>
+
+        <div class="step">
+            <h3>8. Manage Teams</h3>
+            <p>Set up and organize teams within your organizations.</p>
+            <img class="screenshot" src="path_to_manage_teams_screenshot.png" alt="Manage Teams Screenshot">
+        </div>
+
+        <h2>Need Help?</h2>
+        <p>If you encounter any issues or have questions, please contact our support team at support@navease.com</p>
     </div>
-
-    <footer>
-        <p>&copy; 2024 NavEase. All rights reserved.</p>
-    </footer>
 </body>
 </html>
