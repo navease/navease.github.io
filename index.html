@@ -1,347 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NavEase : User Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>NavEase: User Guide</title>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+      <style>
         :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --background-color: #f8f9fa;
-            --text-color: #333;
-            --sidebar-color: #ffffff;
-            --card-color: #ffffff;
-            --border-color: #e0e0e0;
-            --hover-color: #f1f3f5;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --sidebar-width: 280px;
+        --primary-color: #9e9e9e;
+        --secondary-color: #616161;
+        --background-color: #ffffff;
+        --text-color: #333333;
+        --sidebar-color: #f5f5f5;
+        --card-color: #ffffff;
+        --border-color: #e0e0e0;
+        --hover-color: #eeeeee;
+        --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        --sidebar-width: 280px;
         }
-
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         }
-
         html {
-            scroll-behavior: smooth;
+        scroll-behavior: smooth;
         }
-
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            display: grid;
-            grid-template-columns: var(--sidebar-width) 1fr;
-            grid-template-rows: auto 1fr;
-            min-height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--background-color);
+        display: grid;
+        grid-template-columns: var(--sidebar-width) 1fr;
+        grid-template-rows: auto 1fr;
+        min-height: 100vh;
         }
-
         header {
-            grid-column: 1 / -1;
-            background-color: var(--card-color);
-            color: var(--secondary-color);
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        grid-column: 1 / -1;
+        background-color: var(--card-color);
+        color: var(--secondary-color);
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
         }
-
         .logo {
-            display: flex;
-            align-items: center;
+        display: flex;
+        align-items: center;
         }
-
         .logo img {
-            width: 80px;
-            margin-right: 15px;
+        width: 60px;
+        margin-right: 15px;
         }
-
         nav {
-            background-color: var(--sidebar-color);
-            padding: 2rem;
-            height: calc(100vh - 60px);
-            overflow-y: auto;
-            position: sticky;
-            top: 60px;
-            border-right: 1px solid var(--border-color);
+        background-color: var(--sidebar-color);
+        padding: 2rem;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+        position: sticky;
+        top: 60px;
+        border-right: 1px solid var(--border-color);
         }
-
         nav ul {
-            list-style-type: none;
+        list-style-type: none;
         }
-
         nav ul li {
-            margin-bottom: 1rem;
+        margin-bottom: 1rem;
         }
-
         nav ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            display: block;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        display: block;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
         }
-
-        nav ul li a:hover {
-            background-color: var(--hover-color);
-            color: var(--primary-color);
+        nav ul li a:hover, nav ul li a.active {
+        background-color: var(--hover-color);
+        color: var(--secondary-color);
         }
-
         main {
-            padding: 2rem;
-            overflow-y: auto;
+        padding: 2rem;
+        overflow-y: auto;
         }
-
         h1, h2, h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
         }
-
         .section {
-            background-color: var(--card-color);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
+        background-color: var(--card-color);
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease;
+        border: 1px solid var(--border-color);
         }
-
         .section:hover {
-            transform: translateY(-5px);
+        transform: translateY(-5px);
         }
-
         .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            border-radius: 8px;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        margin-bottom: 2rem;
+        border-radius: 8px;
         }
-
         .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
         }
-
         .screenshot {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-            margin: 1rem 0;
-            transition: transform 0.3s ease;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        margin: 1rem 0;
+        transition: transform 0.3s ease;
         }
-
         .screenshot:hover {
-            transform: scale(1.02);
+        transform: scale(1.02);
         }
-
         .step {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
         }
-
         .step:last-child {
-            border-bottom: none;
+        border-bottom: none;
         }
-
         .button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 0.7rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-            font-weight: 600;
+        display: inline-block;
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.7rem 1.5rem;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        font-weight: 600;
         }
-
         .button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        background-color: var(--secondary-color);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
-
+        pre {
+        background-color: var(--sidebar-color);
+        border: 1px solid var(--border-color);
+        border-left: 3px solid var(--primary-color);
+        color: var(--text-color);
+        page-break-inside: avoid;
+        font-family: monospace;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 1.6em;
+        max-width: 100%;
+        overflow: auto;
+        padding: 1em 1.5em;
+        display: block;
+        word-wrap: break-word;
+        }
         @media (max-width: 768px) {
-            body {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                display: none;
-            }
-
-            main {
-                padding: 1rem;
-            }
+        body {
+        grid-template-columns: 1fr;
         }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo">
+        nav {
+        display: none;
+        }
+        main {
+        padding: 1rem;
+        }
+        }
+     </style>
+   </head>
+   <body>
+      <header>
+         <div class="logo">
             <img src="images/logo.png" alt="NavEase Logo">
             <h1>NavEase : A Keyword Based URL Redirection (User Guide)</h1>
-        </div>
-    </header>
-
-    <nav>
-        <ul>
+         </div>
+      </header>
+      <nav>
+         <ul>
             <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#installation">Installation</a></li>
             <li><a href="#getting-started">Getting Started</a></li>
             <li><a href="#dashboard">Dashboard</a></li>
             <li><a href="#adding-url">Adding URLs</a></li>
             <li><a href="#managing-urls">Managing URLs</a></li>
             <li><a href="#user-profile">User Profile</a></li>
             <li><a href="#admin-features">Admin Features</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="introduction" class="section">
+         </ul>
+      </nav>
+      <main>
+         <section id="introduction" class="section">
             <h2>Welcome to NavEase</h2>
             <div>
-                <p>NavEase is a powerful keyword-based URL redirection tool. This guide will help you navigate through the features and functionalities of our application.</p>
+               <p>NavEase is a powerful keyword-based URL redirection tool. This guide will help you navigate through the features and functionalities of our application.</p>
             </div>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/z_k4ilvMVB8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/z_k4ilvMVB8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </div>
-        </section>
-
-        <section id="getting-started" class="section">
+         </section>
+         <section id="installation" class="section">
+            <h2>Installation</h2>
+            <div class="step">
+               <h3>1. Install browser extension</h3>
+               <p>To begin using NavEase, start by installing the browser extension:</p>
+               <ul>
+                  <li><a href="https://chromewebstore.google.com/detail/navease-keyword-based-url/fomjpfemagchmfecanfgblgljfhmkgid" target="_blank" class="button">Google Chrome Extension</a></li>
+                  <li><a href="https://addons.mozilla.org/en-US/firefox/addon/navease/" target="_blank" class="button">Mozilla Firefox Extension</a></li>
+               </ul>
+               <p>Click the "Add to Chrome" button for Chrome Extension or the "Install" button for Firefox Extension.</p>
+               <h3>2. Install NavEase Admin Application</h3>
+               <p>To update keyword to URL mapping and extend these bookmarks to share within organizations and teams, you must install the NavEase admin application.
+                  The admin application is written using Python (3.20) + Flask. The application is also dockerized for easy installation.
+               </p>
+               <p>Use the following Docker command to install and run the NavEase admin application:</p>
+               <pre><code class="language-bash">docker run --name navease-app -d -it \
+-e 'SECRET_KEY=some_secret' \
+-p 8080:8080 \
+-v /usr/local/data/:/app/instance/ \
+akhileshsre/navease-app:latest</code></pre>
+               <p>The URL will be accessible on <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>. You can also map this to your company domain after installing it in your organization.</p>
+            </div>
+         </section>
+         <section id="getting-started" class="section">
             <h2>Getting Started</h2>
-            
             <div class="step">
-                <h3>1. Login</h3>
-                <p>To begin using NavEase, you'll need to log in to your account.</p>
-                <ol>
-                    <li>Navigate to the login page</li>
-                    <li>Enter your username and password</li>
-                    <li>Click the "Login" button</li>
-                </ol>
-                <img class="screenshot" src="images/ext-login.png" alt="Login Screenshot">
-                <img class="screenshot" src="images/app-login.png" alt="Login Screenshot">
+               <h3>1. Login</h3>
+               <p>To begin using NavEase, you'll need to log in to your account.</p>
+               <ol>
+                  <li>Navigate to the login page</li>
+                  <li>Enter your username and password</li>
+                  <li>Click the "Login" button</li>
+               </ol>
+               <img class="screenshot" src="images/ext-login.png" alt="Login Screenshot">
+               <img class="screenshot" src="images/app-login.png" alt="Login Screenshot">
             </div>
-        </section>
-
-        <section id="dashboard" class="section">
+         </section>
+         <section id="dashboard" class="section">
             <h2>Dashboard Overview</h2>
-            
             <div class="step">
-                <p>Once logged in, you'll be directed to your dashboard. Here's what you'll see:</p>
-                <ul>
-                    <li>Organization Level URLs</li>
-                    <li>Team Level URLs</li>
-                    <li>Personal Level URLs</li>
-                </ul>
-                <img class="screenshot" src="images/dashboard.png" alt="Dashboard Screenshot">
+               <p>Once logged in, you'll be directed to your dashboard. Here's what you'll see:</p>
+               <ul>
+                  <li>Organization Level URLs</li>
+                  <li>Team Level URLs</li>
+                  <li>Personal Level URLs</li>
+               </ul>
+               <img class="screenshot" src="images/dashboard.png" alt="Dashboard Screenshot">
             </div>
-        </section>
-
-        <section id="adding-url" class="section">
+         </section>
+         <section id="adding-url" class="section">
             <h2>Adding a New URL</h2>
-            
             <div class="step">
-                <p>To add a new URL redirection:</p>
-                <ol>
-                    <li>Click the "+" button in the bottom right corner</li>
-                    <li>Enter the key (keyword) and the URL</li>
-                    <li>Select the level (Personal, Team, or Organization)</li>
-                    <li>If Team or Organization, select the appropriate options</li>
-                    <li>Click "Add Key-Value" to save</li>
-                </ol>
-                <img class="screenshot" src="images/add-url.png" alt="Add URL Screenshot">
+               <p>To add a new URL redirection:</p>
+               <ol>
+                  <li>Click the "+" button in the bottom right corner</li>
+                  <li>Enter the key (keyword) and the URL</li>
+                  <li>Select the level (Personal, Team, or Organization)</li>
+                  <li>If Team or Organization, select the appropriate options</li>
+                  <li>Click "Add Key-Value" to save</li>
+               </ol>
+               <img class="screenshot" src="images/add-url.png" alt="Add URL Screenshot">
             </div>
-        </section>
-
-        <section id="managing-urls" class="section">
+         </section>
+         <section id="managing-urls" class="section">
             <h2>Managing URLs</h2>
-            
             <div class="step">
-                <p>You can easily manage your URLs:</p>
-                <ul>
-                    <li>Update: Click the "Update" button next to a URL to modify it</li>
-                    <li>Delete: Click the "Delete" button to remove a URL</li>
-                </ul>
+               <p>You can easily manage your URLs:</p>
+               <ul>
+                  <li>Update: Click the "Update" button next to a URL to modify it</li>
+                  <li>Delete: Click the "Delete" button to remove a URL</li>
+               </ul>
             </div>
-        </section>
-
-        <section id="user-profile" class="section">
+         </section>
+         <section id="user-profile" class="section">
             <h2>User Profile</h2>
-            
             <div class="step">
-                <p>To view or edit your profile:</p>
-                <ol>
-                    <li>Click on your profile icon in the sidebar</li>
-                    <li>View your information, including assigned organization and teams</li>
-                    <li>Update your profile information or change your password</li>
-                </ol>
-                <img class="screenshot" src="images/profile.png" alt="Profile Screenshot">
+               <p>To view or edit your profile:</p>
+               <ol>
+                  <li>Click on your profile icon in the sidebar</li>
+                  <li>View your information, including assigned organization and teams</li>
+                  <li>Update your profile information or change your password</li>
+               </ol>
+               <img class="screenshot" src="images/profile.png" alt="Profile Screenshot">
             </div>
-        </section>
-
-        <section id="admin-features" class="section">
+         </section>
+         <section id="admin-features" class="section">
             <h2>Admin Features</h2>
             <p>If you have admin privileges, you'll have access to additional settings:</p>
-
             <div class="step">
-                <h3>Manage Users</h3>
-                <p>Add, update, or remove users from the system.</p>
-                <img class="screenshot" src="images/setting_user.png" alt="Manage Users Screenshot">
+               <h3>Manage Users</h3>
+               <p>Add, update, or remove users from the system.</p>
+               <img class="screenshot" src="images/setting_user.png" alt="Manage Users Screenshot">
             </div>
-
             <div class="step">
-                <h3>Manage Organizations</h3>
-                <p>Create and manage organizations within NavEase.</p>
-                <img class="screenshot" src="images/setting_orgs.png" alt="Manage Organizations Screenshot">
+               <h3>Manage Organizations</h3>
+               <p>Create and manage organizations within NavEase.</p>
+               <img class="screenshot" src="images/setting_orgs.png" alt="Manage Organizations Screenshot">
             </div>
-
             <div class="step">
-                <h3>Manage Teams</h3>
-                <p>Set up and organize teams within your organizations.</p>
-                <img class="screenshot" src="images/setting_teams.png" alt="Manage Teams Screenshot">
+               <h3>Manage Teams</h3>
+               <p>Set up and organize teams within your organizations.</p>
+               <img class="screenshot" src="images/setting_teams.png" alt="Manage Teams Screenshot">
             </div>
-        </section>
-    </main>
-
-    <script>
-        // Highlight active section in sidebar
-        const sections = document.querySelectorAll('.section');
-        const navItems = document.querySelectorAll('nav ul li a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop - 60) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href').slice(1) === current) {
-                    item.classList.add('active');
-                }
-            });
-        });
-    </script>
-</body>
+         </section>
+      </main>
+      <script>
+         // Highlight active section in sidebar
+         const sections = document.querySelectorAll('.section');
+         const navItems = document.querySelectorAll('nav ul li a');
+         window.addEventListener('scroll', () => {
+             let current = '';
+             sections.forEach(section => {
+                 const sectionTop = section.offsetTop;
+                 const sectionHeight = section.clientHeight;
+                 if (scrollY >= sectionTop - 60) {
+                     current = section.getAttribute('id');
+                 }
+             });
+             navItems.forEach(item => {
+                 item.classList.remove('active');
+                 if (item.getAttribute('href').slice(1) === current) {
+                     item.classList.add('active');
+                 }
+             });
+         });
+      </script>
+   </body>
 </html>
